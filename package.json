@@ -1,0 +1,49 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "WebAPP",
+  "type": "module",
+  "main": "./dist/app.js",
+  "scripts": {
+    "build": "node esbuild.js",
+    "start": "node --enable-source-maps ./dist/app.js ",
+    "dev": "nodemon",
+    "test": "vitest"
+  },
+  "author": "Roman Vasenin",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/body-parser": "^1.19.5",
+    "@types/eslint": "^8.56.10",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.8",
+    "@types/nodemon": "^1.19.6",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
+    "ajv": "^8.17.1",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "esbuild": "^0.20.2",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "^2.29.1",
+    "express": "^4.19.2",
+    "express-validator": "^7.1.0",
+    "json-schema": "^0.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.0",
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.2"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": ".js,.ts",
+    "ignore": [],
+    "exec": "npm run build && npm run start"
+  }
+}
