@@ -10,6 +10,8 @@
       "skipLibCheck": true,
       "baseUrl": "./",
       "paths": {
+        "#common/*": ["./src/common/*"],
+        "#infrastructure/*": ["./src/infrastructure/*"],
       },
     },
     "exclude": ["node_modules"],

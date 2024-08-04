@@ -3,3 +3,4 @@
 .DS_Store
 .env
 package-lock.json
+src/common/types/jsonSchema.ts
