@@ -12,6 +12,9 @@
       "paths": {
         "#common/*": ["./src/common/*"],
         "#infrastructure/*": ["./src/infrastructure/*"],
+        "#routes/*": ["./src/routes/*"],
+        "#models/*": ["./src/models/*"],
+        "#config/*": ["./src/config/*"],
       },
     },
     "exclude": ["node_modules"],
