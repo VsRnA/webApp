@@ -50,10 +50,12 @@ User.init({
   role: {
     type: DataTypes.ENUM('user', 'admin', 'manager', 'coach'),
     allowNull: false,
+    defaultValue: 'user',
   },
   active: {
     type: DataTypes.BOOLEAN,
     allowNull: false,
+    defaultValue: true,
   },
   hash: {
     type: DataTypes.STRING,

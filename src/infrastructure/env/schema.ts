@@ -5,31 +5,35 @@ export const schema = {
   properties: {
     PORT: {
       type: 'number',
-      description: 'Server Port',
+      description: 'Порт сервера',
     },
     MYSQL_USERNAME: {
       type: 'string',
-      description: 'Username in mysql server',
+      description: 'Имя пользователя mysql',
     },
     MYSQL_PASSWORD: {
       type: 'string',
-      description: 'Password in mysql server',
+      description: 'Пароль для доступа в mysql',
     },
     MYSQL_DATABASE: {
       type: 'string',
-      description: 'Name DB in mysql server',
+      description: 'Название бд mysql сервера',
     },
     MYSQL_HOST: {
       type: 'string',
-      description: 'Name host in mysql server',
+      description: 'ip адрес mysql сервера',
     },
     MYSQL_PORT: {
       type: 'number',
-      description: 'Port in mysql server',
+      description: 'Порт mysql сервера',
     },
     MYSQL_DIALECT: {
       type: 'string',
       description: 'dialect',
+    },
+    PASSWORD_SALT: {
+      type: 'string',
+      description: 'Соль пароля',
     },
   },
   required: [
@@ -40,5 +44,6 @@ export const schema = {
     'MYSQL_HOST',
     'MYSQL_PORT',
     'MYSQL_DIALECT',
+    'PASSWORD_SALT',
   ],
 } as const satisfies JSONSchema;
