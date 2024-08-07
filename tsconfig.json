@@ -10,6 +10,16 @@
       "skipLibCheck": true,
       "baseUrl": "./",
       "paths": {
+        "#common/*": ["./src/common/*"],
+        "#infrastructure/*": ["./src/infrastructure/*"],
+        "#routes/*": ["./src/routes/*"],
+        "#models/*": ["./src/models/*"],
+        "#config/*": ["./src/config/*"],
+        "#schemas/*": ["./src/schemas/*"],
+        "#controllers/*": ["./src/controllers/*"],
+        "#repositories/*": ["./src/repositories/*"],
+        "#errors/*": ["./src/errors/*"],
+        "#services/*": ["./src/services/*"]
       },
     },
     "exclude": ["node_modules"],
