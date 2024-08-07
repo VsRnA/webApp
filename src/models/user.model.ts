@@ -45,7 +45,6 @@ User.init({
   phone: {
     type: DataTypes.STRING,
     allowNull: false,
-    unique: true,
   },
   role: {
     type: DataTypes.ENUM('user', 'admin', 'manager', 'coach'),

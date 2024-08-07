@@ -1,17 +1,16 @@
-import { validateRequest } from '#errors/validate';
+import { validateData } from '#errors/validate';
 import { UserAttribute } from '#models/user.model';
-import { findUserByEmail } from '#repositories/user/find';
-import { RequestCreateSchema, ResponseCreateSchema } from '#schemas/user/create';
+import { createUser } from '#repositories/user/create';
+import { RequestCreateSchema } from '#schemas/user/create';
 
-export type RegisterType = Pick<UserAttribute, 'name' | 'email' | 'phone' >  & {
-  password: string,
+export type CreatePayload = Pick<UserAttribute, 'name' | 'email' | 'phone' > & {
+  password: string
 }
 
-export async function create(payload: RegisterType) {
-  validateRequest(RequestCreateSchema, payload);
+export async function create(payload: CreatePayload) {
+  validateData(RequestCreateSchema, payload);
 
-  const user =
-  
-  if (pretendent) throw Error('[CREATE USER] Пользователей с таким ${}');
-  return { data: user };
+  await createUser(payload);
+
+  return { data: true };
 }

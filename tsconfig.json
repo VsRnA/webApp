@@ -19,6 +19,7 @@
         "#controllers/*": ["./src/controllers/*"],
         "#repositories/*": ["./src/repositories/*"],
         "#errors/*": ["./src/errors/*"],
+        "#services/*": ["./src/services/*"]
       },
     },
     "exclude": ["node_modules"],

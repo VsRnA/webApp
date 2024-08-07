@@ -3,5 +3,5 @@
 .DS_Store
 .env
 package-lock.json
-src/common/types/jsonSchema.ts
+src/common/types
 test.http
