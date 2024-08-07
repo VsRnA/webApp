@@ -10,16 +10,7 @@ const ajv = new Ajv(
   },
 );
 
-export function validateResponse<T extends JSONSchema>(schema:T, data:any) {
-  const dataValidate = { ...data } as SchemaToType<T>;
-  const validate = ajv.compile(schema);
-  if (!validate(dataValidate)) {
-    throw new Error(JSON.stringify(validate.errors));
-  }
-  return true;
-}
-
-export function validateRequest<T extends JSONSchema>(schema:T, data:any) {
+export function validateData<T extends JSONSchema>(schema:T, data:any) {
   const dataValidate = { ...data } as SchemaToType<T>;
   const validate = ajv.compile(schema);
   if (!validate(dataValidate)) {
